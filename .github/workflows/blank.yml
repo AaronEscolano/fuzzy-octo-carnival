@@ -40,6 +40,8 @@ jobs:
           output_file_path: console,results.sarif
           api-key: ${{ secrets.API_KEY }}
           prisma-api-url: https://api3.prismacloud.io
+          enable_secrets_scan_all_files: True
+          use_enforcement_rules: True
         
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v3
